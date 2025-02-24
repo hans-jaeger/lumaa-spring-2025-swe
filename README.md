@@ -77,7 +77,7 @@ Follow this guide to install PostgreSQL using default settings: [Installation Gu
 
 ```bash
 psql -U postgres
-CREATE DATABASE task_management
+CREATE DATABASE task_management;
 ```
 
 You can verify that the database is there by typing the following command:
