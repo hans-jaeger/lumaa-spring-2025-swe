@@ -33,7 +33,7 @@ The application uses React with TypeScript for the frontend, Node.js with Expres
 
 ---
 
-## Install the following prerequisites
+## Prerequisites
 
 - Node.js (v14 or later recommended)
 - npm (Which is installed when installing Node.js)
@@ -89,7 +89,7 @@ You can verify that the database is there by typing the following command:
 
 ### b. Create a file named ".env" file in the backend directory:
 
-You can create the file by accessing your file explorer or finder. 
+You can create the file by accessing your file explorer or finder.
 
 Execute the following command where you replace your_password with your actual password:
 
