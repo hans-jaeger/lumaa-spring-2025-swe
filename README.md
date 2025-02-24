@@ -36,8 +36,8 @@ The application uses React with TypeScript for the frontend, Node.js with Expres
 ## Prerequisites
 
 - Node.js (v14 or later recommended)
-- npm (comes with Node.js)
-- PostgreSQL installed and running (locally)
+- npm (Which is installed when installing Node.js)
+- PostgreSQL installed and running (locally) which I provide instructions below
 - Git (for cloning the repository)
 
 ---
@@ -47,6 +47,8 @@ The application uses React with TypeScript for the frontend, Node.js with Expres
 ### Backend Setup
 
 #### 1. Clone the Repository
+
+Open terminal or command prompt and enter the following:
 
 ```bash
 git clone https://github.com/hans-jaeger/lumaa-spring-2025-swe.git
@@ -68,13 +70,13 @@ cd backend
 npm install
 ```
 
-Follow this guide to install PostgreSQL: [Installation Guide](https://www.prisma.io/dataguide/postgresql/setting-up-a-local-postgresql-database?query=&page=1)
+Follow this guide to install PostgreSQL using default settings: [Installation Guide](https://www.prisma.io/dataguide/postgresql/setting-up-a-local-postgresql-database?query=&page=1)
 
 1. Once you have finished installing PostgreSQL, open terminal or command prompt in your computer.
-2. Run the following command to connect to your PostgreSQL server (using your username you have selected, by default this is set to postgres if nothing is inputted for the username):
+2. Run the following command to connect to your PostgreSQL server (using the superuser which is postgres):
 
 ```bash
-psql -U your_username
+psql -U postgres
 CREATE DATABASE task_management
 ```
 
@@ -92,7 +94,7 @@ Execute the following command where you replace your_username and your_password 
 ```ini
 # Note: The your_username and your_password comes from the installation when from installing PostGreSQL. Usually the default username is postgres but check your account information.
 
-DATABASE_URL=postgres://your_username:your_password@localhost:5432/task_management
+DATABASE_URL=postgres://postgres:your_password@localhost:5432/task_management
 JWT_SECRET= b3aTLYvZA48rKogmrDwaqiGs3Vz+qtjSuAK1NDdYnpM=
 PORT=5001
 
@@ -100,13 +102,13 @@ PORT=5001
 
 ### c. Database Migrations
 
-Execute the following command where you replace your_username with your actual username:
+Execute the following command in terminal or command prompt:
 
 ```bash
 #Note: Your current path should be the following for this to work: lumaa-spring-2025/backend.
 cd migrations
-psql -U your_username -d task_management -f users.sql
-psql -U your_username -d task_management -f tasks.sql
+psql -U postgres -d task_management -f users.sql
+psql -U postgres -d task_management -f tasks.sql
 
 ```
 
