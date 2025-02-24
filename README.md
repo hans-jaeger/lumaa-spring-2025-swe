@@ -87,9 +87,11 @@ You can verify that the database is there by typing the following command:
 \l
 ```
 
-### b. Create an .env file in the backend directory:
+### b. Create a file named ".env" file in the backend directory:
 
-Execute the following command where you your_password with your actual password:
+You can create the file by accessing your file explorer or finder. 
+
+Execute the following command where you replace your_password with your actual password:
 
 ```ini
 # Note: The your_username and your_password comes from the installation when from installing PostGreSQL. Usually the default username is postgres but check your account information.
