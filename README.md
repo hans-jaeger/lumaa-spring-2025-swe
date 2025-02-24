@@ -72,7 +72,7 @@ npm install
 
 Follow this guide to install PostgreSQL using default settings: [Installation Guide](https://www.prisma.io/dataguide/postgresql/setting-up-a-local-postgresql-database?query=&page=1)
 
-1. Once you have finished installing PostgreSQL, open terminal or command prompt in your computer.
+1. Once you have finished installing PostgreSQL, open psql application.
 2. Run the following command to connect to your PostgreSQL server (using the superuser which is postgres):
 
 ```bash
@@ -89,7 +89,7 @@ You can verify that the database is there by typing the following command:
 
 ### b. Create an .env file in the backend directory:
 
-Execute the following command where you replace your_username and your_password with your actual account:
+Execute the following command where you your_password with your actual password:
 
 ```ini
 # Note: The your_username and your_password comes from the installation when from installing PostGreSQL. Usually the default username is postgres but check your account information.
