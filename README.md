@@ -33,7 +33,7 @@ The application uses React with TypeScript for the frontend, Node.js with Expres
 
 ---
 
-## Prerequisites
+## Install the following prerequisites
 
 - Node.js (v14 or later recommended)
 - npm (comes with Node.js)
