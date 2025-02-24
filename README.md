@@ -50,7 +50,7 @@ The application uses React with TypeScript for the frontend, Node.js with Expres
 
 ```bash
 git clone https://github.com/hans-jaeger/lumaa-spring-2025-swe.git
-cd your_forked_repo
+cd lumaa-spring-2025-swe
 ```
 
 ---
