@@ -1,0 +1,151 @@
+```md
+
+# Task Management Application
+
+This is a full-stack Task Management application built for a coding challenge. It allows users to register, log in, and manage their tasks (create, update, delete). 
+The application uses React with TypeScript for the frontend, Node.js with Express for the backend, and PostgreSQL as the database. JWT authentication is implemented to secure task operations.
+
+---
+
+## Features
+
+- **User Registration & Login:**  
+  - New users can register with a unique username and password.  
+  - Passwords are hashed using bcrypt.
+  - Registered users can log in and receive a JWT token.
+
+- **Task Management (CRUD):**  
+  - Authenticated users can create, view, update, and delete tasks.
+  - Tasks are associated with a specific user.
+  - Protected endpoints ensure that only logged-in users can modify their tasks.
+
+- **Security:**  
+  - JWT authentication protects sensitive routes.
+  - Environment variables are used to manage secrets and configuration.
+
+---
+
+## Tech Stack
+
+- **Frontend:** React, TypeScript, Axios, React Router v6
+- **Backend:** Node.js, Express, bcrypt, jsonwebtoken, pg, cors
+- **Database:** PostgreSQL
+
+---
+
+## Prerequisites
+
+- Node.js (v14 or later recommended)
+- npm (comes with Node.js)
+- PostgreSQL installed and running (locally)
+- Git (for cloning the repository)
+
+---
+
+## Setup Instructions
+
+### Backend Setup
+
+#### 1. Clone the Repository
+
+```bash
+git clone https://github.com/hans-jaeger/lumaa-spring-2025-swe.git
+cd your_forked_repo
+```
+---
+
+#### 2. Backend Setup
+    
+### a. Install Dependencies
+
+Navigate to the backend directory and install the required packages:
+
+```bash
+#Note: Your current path should be the following for this to work: lumaa-spring-2025/
+# Check with "pwd" to see your current path within terminal.
+cd backend
+npm install
+```
+Follow this guide to install PostgreSQL: [Installation Guide](https://www.prisma.io/dataguide/postgresql/setting-up-a-local-postgresql-database?query=&page=1)
+
+1. Once you have finished installing PostgreSQL, open terminal or command prompt in your computer.
+2. Run the following command to connect to your PostgreSQL server (using your username you have selected, by default this is set to postgres if nothing is inputted for the username):
+
+```bash
+psql -U your_username
+CREATE DATABASE task_management
+```
+
+You can verify that the database is there by typing the following command:
+
+```bash
+# Note: this will display the databases you have 
+\l
+```
+
+### b. Create an .env file in the backend directory:
+
+Execute the following command where you replace your_username and your_password with your actual account:
+
+```ini
+# Note: The your_username and your_password comes from the installation when from installing PostGreSQL. Usually the default username is postgres but check your account information. 
+
+DATABASE_URL=postgres://your_username:your_password@localhost:5432/task_management
+JWT_SECRET= b3aTLYvZA48rKogmrDwaqiGs3Vz+qtjSuAK1NDdYnpM=
+PORT=5001
+
+```
+### c. Database Migrations
+
+Execute the following command where you replace your_username with your actual username:
+
+```bash
+#Note: Your current path should be the following for this to work: lumaa-spring-2025/backend.
+cd migrations
+psql -U your_username -d task_management -f users.sql
+psql -U your_username -d task_management -f tasks.sql
+
+```
+
+### d. Start the backend server
+
+```bash
+    npm run dev
+```
+Your backend should now be running on http://localhost:5001.
+
+### 3. Setting up the frontend
+
+### a. Install Frontend Dependencies 
+
+In a new terminal window, navigate to the frontend directory and install its dependencies:
+
+```bash
+#Note: Your current path should be the following for this to work: lumaa-spring-2025/backend/migrations.
+cd ../../frontend
+npm install
+```
+
+### b. Configure Enviroment Variables
+
+Create a file named .env in the frontend directory with the following content:
+```ini
+REACT_APP_API_URL=http://localhost:5001
+```
+
+### c. Start the Frontend Server
+
+Start the frontend application by running:
+
+```bash
+npm start
+```
+
+The React app will run on  http://localhost:3000. If the app does not appear in your browser, copy the link and paste it into your url search bar. Once you have the app you will be able to test the functionalities 
+
+## Video | 
+
+[Video Demo](https://www.youtube.com/watch?v=lCFaQ71sDLY)
+
+
+```

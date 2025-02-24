@@ -1,0 +1,82 @@
+
+/* General font family */
+*{font-family: sans-serif;   }
+
+/* Center the tasks container vertically and horizontally */
+.tasks-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #74ABE2, #5563DE);
+  }
+  
+  /* Tasks box styling */
+  .tasks-box {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+  }
+  
+  /* Header styling */
+  .tasks-box h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  /* Simple error message styling */
+  .error-message {
+    color: #ff4d4d;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  
+  /* Tasks list styling */
+  .tasks-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .task-item {
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
+  }
+  
+  .task-item h3 {
+    margin: 0 0 0.5rem;
+    color: #5563DE;
+  }
+  
+  .task-item p {
+    margin: 0;
+    color: #333;
+  }
+  
+  .labelInputs{
+    margin-right: 10px;
+
+  }
+  /* Nav link for the login */
+  .links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .links a {
+    color: #5563DE;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+  }
+  
+  .links a:hover {
+    color: #434cb7;
+  }
