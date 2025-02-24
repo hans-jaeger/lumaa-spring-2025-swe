@@ -48,7 +48,7 @@ The application uses React with TypeScript for the frontend, Node.js with Expres
 
 #### 1. Clone the Repository
 
-Open terminal or command prompt and enter the following:
+Open terminal or command prompt (running as Administrator) and enter the following within a directory that is not System32 (if windows):
 
 ```bash
 git clone https://github.com/hans-jaeger/lumaa-spring-2025-swe.git
